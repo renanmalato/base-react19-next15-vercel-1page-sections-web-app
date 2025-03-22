@@ -1,0 +1,17 @@
+@use '@/theme/styles' as *;
+
+.footer-section {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111111;
+  color: white;
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+} 

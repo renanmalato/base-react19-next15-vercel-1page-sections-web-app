@@ -2,12 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   devIndicators: {
-    buildActivity: false,
-    buildActivityPosition: "bottom-right",
+    position: 'bottom-right',
+    enabled: false
   },
   experimental: {
     turbo: {
-      devOverlay: false  // This should hide the Turbo overlay
+      devOverlay: false
     }
   }
 }

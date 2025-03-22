@@ -1,2 +1,21 @@
-$primary: #333333;
-$secondary: #666666;
+// Main colors
+$black: #000000;
+$white: #FFFFFF;
+
+// Brand colors
+$primary: #121212;
+$secondary: #2a2a2a;
+
+// UI colors
+$background: var(--background);
+$foreground: var(--foreground);
+
+// Accent colors
+$accent-one: #FF5500;
+$accent-two: #00CCFF;
+
+// Gradient
+@mixin gradient-primary {
+  background: linear-gradient(45deg, $accent-one, $accent-two);
+}
+
