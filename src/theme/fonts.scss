@@ -1,0 +1,45 @@
+// Font Face Declarations
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url('/assets/fonts/AkzidGrtskNext-ExtraLight.woff2') format('woff2'),
+       url('/assets/fonts/AkzidGrtskNext-ExtraLight.woff') format('woff'),
+       url('/assets/fonts/AkzidenzGroteskBE-Ex.otf') format('opentype'),
+       url('/assets/fonts/AkzidGrtskNext-ExtraLight.ttf') format('truetype');
+  font-weight: 200; // ExtraLight
+  font-style: normal;
+  font-display: swap;
+}
+
+// Font Family Variables
+$font-primary: var(--font-montserrat); // From Next.js
+$font-secondary: var(--font-fraunces); // From Next.js
+$font-akzidenz: 'Akzidenz Grotesk', sans-serif;
+
+// Font Weights
+$font-weight-thin: 100;
+$font-weight-light: 200;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+// Font Sizes
+$font-size-xs: 0.625rem;  // 10px
+$line-height-extended: 1.79;
+
+// Font Utility Classes
+.font-akzidenz {
+  font-family: $font-akzidenz;
+  font-weight: $font-weight-light;
+  line-height: $line-height-extended;
+}
+
+.font-montserrat {
+  font-family: $font-primary;
+}
+
+.font-fraunces {
+  font-family: $font-secondary;
+  font-weight: $font-weight-semibold;
+}

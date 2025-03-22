@@ -1,0 +1,15 @@
+@use "@/theme/styles.scss" as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  
+  h1 {
+    font-family: $font-akzidenz;  // Using your Akzidenz font
+    font-weight: $font-weight-light;
+  }
+}
