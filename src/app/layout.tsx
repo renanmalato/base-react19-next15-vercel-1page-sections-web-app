@@ -4,7 +4,7 @@ import "@/theme/google-translate.css"; // Import Google Translate CSS
 import { ScrollProvider } from "@/context/ScrollContext";
 import { Schema } from "@/lib/seo";
 import { metadata } from "./metadata";
-import GoogleTranslateScript from "@/app/utils/GoogleTranslateScript";
+import GoogleTranslateScript from "@/utils/GoogleTranslateScript";
 
 
 const montserrat = Montserrat({

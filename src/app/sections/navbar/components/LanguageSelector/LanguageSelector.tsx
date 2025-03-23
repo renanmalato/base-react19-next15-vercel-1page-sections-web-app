@@ -1,6 +1,6 @@
 'use client';
 
-import { useGoogleTranslate } from '../../hooks/useGoogleTranslate';
+import { useGoogleTranslate } from '@/hooks/useGoogleTranslate';
 import './LanguageSelector.scss';
 
 export function LanguageSelector() {

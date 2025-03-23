@@ -1,0 +1,9 @@
+export { default as Header } from '@/sections/Header/Header';
+export { default as NavBar } from '@/sections/NavBar/NavBar';
+export { default as Slideshow } from '@/sections/Slideshow/Slideshow';
+export { default as About } from '@/sections/About/About';
+export { default as Packages } from '@/sections/Packages/Packages';
+export { default as Featured } from '@/sections/Featured/Featured';
+export { default as SlideshowTwo } from '@/sections/SlideshowTwo/SlideshowTwo';
+export { default as Contact } from '@/sections/Contact/Contact';
+export { default as Footer } from '@/sections/Footer/Footer'; 
