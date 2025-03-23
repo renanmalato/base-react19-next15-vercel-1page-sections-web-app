@@ -11,7 +11,7 @@ export const useGoogleTranslate = () => {
         const checkGoogleTranslate = setInterval(() => {
             attempts++;
             
-            if (!(window as any).google?.translate) {
+            if (!(window as Window & typeof globalThis & { google?: { translate: unknown } }).google?.translate) {
                 if (attempts >= maxAttempts) {
                     clearInterval(checkGoogleTranslate);
                 }

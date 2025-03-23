@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import './Navbar.scss';
 import { LanguageSelector } from './components/LanguageSelector/LanguageSelector';
 

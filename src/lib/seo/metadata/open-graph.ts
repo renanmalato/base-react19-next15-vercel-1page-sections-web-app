@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import { BUSINESS_INFO } from '../constants/business';
 
 export const openGraphLanguages = {

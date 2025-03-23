@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import { baseMetadata } from './metadata/base';
-import { openGraph, openGraphLanguages, getOpenGraphByLanguage } from './metadata/open-graph';
-import { twitter, getTwitterByLanguage } from './metadata/twitter';
+import { getOpenGraphByLanguage } from './metadata/open-graph';
+import { getTwitterByLanguage } from './metadata/twitter';
 import { robots } from './metadata/robots';
 import { VERIFICATION } from './constants/verification';
-import { BUSINESS_INFO } from './constants/business';
 
 // TODO: Add verifications / OG images and all other metadata review
 
