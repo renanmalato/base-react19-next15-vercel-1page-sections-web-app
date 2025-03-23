@@ -44,4 +44,25 @@
       }
     }
   }
+  
+  .language-selector-container {
+    margin-left: 2rem;
+  }
+  
+  // Responsive styles
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    
+    .nav-links {
+      order: 2;
+      width: 100%;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    
+    .language-selector-container {
+      order: 1;
+      margin-left: 0;
+    }
+  }
 } 

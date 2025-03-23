@@ -2,6 +2,7 @@
 
 import './NavBar.scss';
 import { useScroll } from '@/context/ScrollContext';
+import { LanguageSelector } from '@/components/navigation/components/LanguageSelector/LanguageSelector';
 
 export default function NavBar() {
   const { scrollToSection } = useScroll();
@@ -31,6 +32,11 @@ export default function NavBar() {
           </li>
         ))}
       </ul>
+      
+      {/* Language Selector */}
+      <div className="language-selector-container">
+        <LanguageSelector />
+      </div>
     </nav>
   );
 } 

@@ -1,0 +1,72 @@
+/* Hide Google Translate elements */
+.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+div#goog-gt-,
+.goog-te-menu-value,
+.VIpgJd-ZVi9od-l4eHX-hSRGPd,
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc,
+.goog-logo-link,
+.goog-te-gadget span,
+.goog-te-gadget div select {
+    display: none !important;
+}
+
+/* Reset body position */
+body {
+    top: 0 !important;
+    position: static !important;
+}
+
+/* Hide the complete Google Translate widget except the select */
+.goog-te-gadget {
+    font-size: 0px !important; /* Hide any remaining text */
+    color: transparent !important;
+}
+
+/* Hide "Powered by" text */
+.goog-te-gadget .goog-te-combo + div {
+    display: none !important;
+}
+
+.goog-te-gadget-simple {
+    display: none !important;
+}
+
+/* Additional specific selectors */
+#goog-gt-tt, 
+.goog-te-balloon-frame,
+.goog-tooltip,
+.goog-tooltip:hover {
+    display: none !important;
+}
+
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Keep only the combo box but hide it */
+.goog-te-combo {
+    position: absolute !important;
+    visibility: hidden !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+/* Hide all Google Translate branding */
+.VIpgJd-ZVi9od-l4eHX-hSRGPd,
+.VIpgJd-ZVi9od-l4eHX-hSRGPd *,
+.goog-te-banner-frame,
+.goog-te-banner-frame * {
+    display: none !important;
+}
+
+/* Hide any remaining Google elements */
+[class*='goog-te-'],
+[class*='VIpgJd-'] {
+    font-size: 0 !important;
+} 
