@@ -15,6 +15,12 @@ $accent-one: #FF5500;
 $accent-two: #00CCFF;
 
 // Gradient
+
+// Music theme gradients
+$music-gradient-1: linear-gradient(45deg, #ff5500, #ff9500);
+$music-gradient-2: linear-gradient(45deg, #00ccff, #0066ff);
+$music-gradient-3: linear-gradient(45deg, #ff5500, #00ccff);
+
 @mixin gradient-primary {
   background: linear-gradient(45deg, $accent-one, $accent-two);
 }

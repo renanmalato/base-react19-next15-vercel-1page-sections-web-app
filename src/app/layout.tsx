@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
 import { Montserrat, Fraunces } from "next/font/google";
 import "@/theme/styles.scss"; // This should import your main styles file that imports fonts.scss
 import { ScrollProvider } from "@/context/ScrollContext";
+import { Schema } from "@/lib/seo";
+import { metadata } from "./metadata";
 
 
 const montserrat = Montserrat({
@@ -18,10 +19,7 @@ const fraunces = Fraunces({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  title: "Musica",
-  description: "Your music services website",
-};
+export { metadata };
 
 export default function RootLayout({
   children,
@@ -34,6 +32,7 @@ export default function RootLayout({
         <ScrollProvider>
           {children}
         </ScrollProvider>
+        <Schema />
       </body>
     </html>
   );
