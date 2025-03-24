@@ -1,3 +1,5 @@
+@use '@/theme/colors' as *;
+
 // Font Face Declarations
 @font-face {
   font-family: 'Akzidenz Grotesk';
@@ -42,4 +44,14 @@ $line-height-extended: 1.79;
 .font-fraunces {
   font-family: $font-secondary;
   // font-weight: $font-weight-semibold;
+}
+
+p {
+  font-family: $font-primary;
+  color: $secondary;
+}
+
+span {
+  font-family: $font-primary;
+  color: $secondary;
 }
