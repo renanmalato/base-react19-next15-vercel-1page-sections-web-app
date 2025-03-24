@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, ReactNode } from 'react';
+import { createContext, useContext, ReactNode, useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 
@@ -37,26 +37,51 @@ const MobileContext = createContext<DeviceType>({
 // ------------------------------- //
 
 export function MobileProvider({ children }: { children: ReactNode }) {
+  // Add mounting state
+  const [isMounted, setIsMounted] = useState(false);
 
+  // Move media queries into state
+  const [deviceState, setDeviceState] = useState<DeviceType>({
+    isMobile: false,
+    isTablet: false,
+    isDesktop: true, // Default to desktop
+    isPortrait: false,
+    isRetina: false
+  });
 
-  const isMobile = useMediaQuery({ maxWidth: BREAKPOINTS.mobile });
-  const isTablet = useMediaQuery({ minWidth: BREAKPOINTS.mobile + 1, maxWidth: BREAKPOINTS.tablet });
-  const isDesktop = useMediaQuery({ minWidth: BREAKPOINTS.desktop });
-  const isPortrait = useMediaQuery({ orientation: 'portrait' });
-  const isRetina = useMediaQuery({ minResolution: '2dppx' });
+  // Use media queries
+  const mobileQuery = useMediaQuery({ maxWidth: BREAKPOINTS.mobile });
+  const tabletQuery = useMediaQuery({ 
+    minWidth: BREAKPOINTS.mobile + 1, 
+    maxWidth: BREAKPOINTS.tablet 
+  });
+  const desktopQuery = useMediaQuery({ minWidth: BREAKPOINTS.desktop });
+  const portraitQuery = useMediaQuery({ orientation: 'portrait' });
+  const retinaQuery = useMediaQuery({ minResolution: '2dppx' });
 
-  // ------------------------------- //
-  //  Debugging Sizes               //
-  // ------------------------------- //
-  
-  if (typeof window !== 'undefined') {
-    console.log({isMobile, isTablet, isDesktop, isPortrait, isRetina, windowWidth: window.innerWidth});
+  useEffect(() => {
+    // Update state only after component mounts
+    setDeviceState({
+      isMobile: mobileQuery,
+      isTablet: tabletQuery,
+      isDesktop: desktopQuery,
+      isPortrait: portraitQuery,
+      isRetina: retinaQuery
+    });
+    setIsMounted(true);
+  }, [mobileQuery, tabletQuery, desktopQuery, portraitQuery, retinaQuery]);
+
+  // Return early with default values during SSR
+  if (!isMounted) {
+    return (
+      <MobileContext.Provider value={deviceState}>
+        {children}
+      </MobileContext.Provider>
+    );
   }
 
   return (
-    <MobileContext.Provider 
-      value={{ isMobile, isTablet, isDesktop, isPortrait, isRetina }}
-    >
+    <MobileContext.Provider value={deviceState}>
       {children}
     </MobileContext.Provider>
   );
