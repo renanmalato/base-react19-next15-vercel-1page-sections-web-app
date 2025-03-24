@@ -5,7 +5,7 @@ import { ScrollProvider } from "@/context/ScrollContext";
 import { Schema } from "@/lib/seo";
 import { metadata } from "./metadata";
 import GoogleTranslateScript from "@/utils/GoogleTranslateScript";
-
+import { MobileProvider } from "@/context/MobileContext";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -32,7 +32,9 @@ export default function RootLayout({
     <html lang="pt" className={`${montserrat.variable} ${fraunces.variable}`}>
       <body>
         <ScrollProvider>
-          {children}
+          <MobileProvider>
+            {children}
+          </MobileProvider>
         </ScrollProvider>
         <Schema />
         <GoogleTranslateScript />
