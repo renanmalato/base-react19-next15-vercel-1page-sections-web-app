@@ -1,6 +1,6 @@
 const pushoverConfig = {
-  token: process.env.NEXT_PUBLIC_PUSHOVER_TOKEN,  // Your app token: am7qfpzsn4vcf19c2vn55ox7d2sv7q
-  user: process.env.NEXT_PUBLIC_PUSHOVER_USER,    // Your group key: gfgiom7homiy54vu79beaospw87rnf
+  token: process.env.NEXT_PUBLIC_PUSHOVER_TOKEN,  
+  user: process.env.NEXT_PUBLIC_PUSHOVER_USER,    
 };
 
 // Debug logging only in development
