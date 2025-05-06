@@ -51,6 +51,14 @@ export const seoConfig: Metadata = {
       'msvalidate.01': VERIFICATION.bing
     }
   },
+  icons: {
+    icon: [
+      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon.png', sizes: '192x192', type: 'image/png' }
+    ],
+    shortcut: '/icon.png',
+    apple: '/icon.png'
+  },
   title: configLanguages['pt-BR'].title,
   description: configLanguages['pt-BR'].description,
   keywords: configLanguages['pt-BR'].keywords,

@@ -80,13 +80,13 @@ export const baseMetadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico' },
+      { url: '/icon.png', type: 'image/png' },
       { url: '/icon.png', type: 'image/png', sizes: '32x32' },
-      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
-      { url: '/icon-512.png', type: 'image/png', sizes: '512x512' },
+      { url: '/icon.png', type: 'image/png', sizes: '16x16' }
     ],
+    shortcut: { url: '/icon.png' },
     apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180' }
+      { url: '/icon.png' }
     ],
   },
 }; 
